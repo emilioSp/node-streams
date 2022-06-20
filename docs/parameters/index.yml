@@ -1,0 +1,2 @@
+petId:
+  $ref: './petId.yml'

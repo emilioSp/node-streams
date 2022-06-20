@@ -1,0 +1,31 @@
+get:
+  summary: list pets
+  operationId: listPets
+  tags:
+    - pets
+  responses:
+    200:
+      description: a list of pets
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../schemas/pet.yml"
+post:
+  summary: Create a pet
+  operationId: createPet
+  tags:
+    - pets
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/petPreview.yml"
+  responses:
+    200:
+      description: a new pet
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/pet.yml'

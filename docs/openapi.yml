@@ -1,0 +1,16 @@
+openapi: '3.0.1'
+info:
+  version: 1.0.0
+  title: Swagger Petstore
+  description: OpenAPI Specification for the pet store
+  license:
+    name: MIT
+servers:
+  - url: http://localhost
+paths:
+  $ref: './paths/index.yml'
+components:
+  parameters:
+    $ref: './parameters/index.yml'
+  schemas:
+    $ref: './schemas/index.yml'

@@ -1,0 +1,30 @@
+GET localhost:80/pets/1
+###
+
+GET localhost:80/pets/?size=x-large
+###
+GET localhost:80/pets/
+###
+
+POST localhost:80/pets/
+Content-Type: application/json
+
+{
+  "name": "Mami",
+  "age": 10
+}
+
+###
+
+POST localhost:80/sign-up
+Content-Type: application/json
+
+{
+  "user_id": "Mami"
+}
+
+###
+
+GET localhost:80/auth/me
+Authorization: Bearer blableablea
+

@@ -1,0 +1,4 @@
+pet:
+  $ref: './pet.yml'
+petPreview:
+  $ref: './petPreview.yml'

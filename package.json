@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Node backend starter",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:docs": "swagger-cli bundle docs/openapi.yml --outfile docs/_build/openapi.yml --type yaml",
+    "serve": "yarn serve:${NODE_ENV:-development}",
+    "serve:development": "NODE_ENV=development nodemon --inspect=0.0.0.0:9229 -r envk src/index.js",
+    "serve:production": "node src/index.js",
+    "jest": "NODE_ENV=development NODE_OPTIONS='--experimental-vm-modules -r envk' jest --detectOpenHandles --run-in-band ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilioSp/node-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilioSp/node-backend/issues"
+  },
+  "homepage": "https://github.com/emilioSp/node-backend#readme",
+  "dependencies": {
+    "@koa/cors": "^3.3.0",
+    "@koa/router": "^10.1.1",
+    "ajv": "^8.11.0",
+    "better-ajv-errors": "^1.2.0",
+    "envk": "^3.2.0",
+    "jest": "^28.1.1",
+    "jwt-simple": "^0.5.6",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-no-slash": "^1.0.2",
+    "mysql2": "^2.3.3",
+    "nanoid": "^3.3.4",
+    "supertest": "^6.2.3",
+    "swagger-combine": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint-config-emiliosp": "^1.0.20",
+    "nodemon": "^2.0.16",
+    "swagger-cli": "^4.0.4"
+  }
+}

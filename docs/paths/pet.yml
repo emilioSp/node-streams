@@ -1,0 +1,19 @@
+get:
+  summary: Info for a specific pet
+  operationId: showPetById
+  tags:
+    - pets
+  parameters:
+    - in: path
+      name: petId
+      schema:
+        type: integer
+      required: true
+      description: Numeric ID of the pet to get
+  responses:
+    200:
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/pet.yml"
